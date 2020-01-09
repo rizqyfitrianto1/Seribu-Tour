@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_user"
+                android:src="@drawable/icon_nopic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+        <LinearLayout
+                android:layout_marginStart="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tv_nama"
+                    android:text="nama"
+                    android:textColor="@color/blackPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/tv_date"
+                    android:text="date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <RatingBar
+                    android:id="@+id/rb_ticket"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/RatingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:numStars="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/tv_comment"
+                    android:text="comment"
+                    android:textColor="@color/blackPrimary"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@color/whitePrimary">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/photo_profile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/icon_nopic">
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <RelativeLayout
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="110dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/btn_add_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_btn_plus_blue"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="+"
+                android:textColor="#FFF"
+                android:textSize="22dp"/>
+
+    </RelativeLayout>
+
+        <LinearLayout
+                android:layout_below="@+id/photo_profile"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:hint="Nama"
+                    android:textSize="18sp"
+                    android:textColor="@color/blackPrimary"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <EditText
+                    android:background="@drawable/bg_border_et"
+                    android:id="@+id/edt_nama"
+                    android:hint="Nama"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+            <TextView
+                    android:hint="No Handphone"
+                    android:textSize="18sp"
+                    android:textColor="@color/blackPrimary"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <EditText
+                    android:background="@drawable/bg_border_et"
+                    android:id="@+id/edt_no_telp"
+                    android:hint="No Hanphone"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+            <Button
+                    android:id="@+id/btn_save"
+                    android:text="Save"
+                    android:layout_marginVertical="30dp"
+                    android:textColor="@color/whitePrimary"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="18sp"
+                    android:background="@drawable/bg_btn_blue_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+                android:id="@+id/loading"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <include
+                    android:id="@+id/lottie"
+                    layout="@layout/lottie"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whitePrimary"
+        tools:context=".Admin.Activity.PaketWisataActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/appbar"
+            android:layout_marginTop="10dp"
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+            android:id="@+id/loading"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+                android:id="@+id/lottie"
+                layout="@layout/lottie"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/backup"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+                android:layout_marginTop="10dp"
+                app:lottie_fileName="11192-empty.json"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:layout_width="120dp"
+                android:layout_height="120dp">
+
+        </com.airbnb.lottie.LottieAnimationView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add_wisata"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_add"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+
+</RelativeLayout>

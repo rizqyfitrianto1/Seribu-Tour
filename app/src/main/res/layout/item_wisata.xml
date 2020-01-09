@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="10dp"
+                android:paddingBottom="10dp"
+                android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:elevation="5dp"
+            app:cardCornerRadius="5dp"
+            android:layout_height="210dp">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+            <ImageView
+                    android:id="@+id/img_wisata"
+                    android:background="@drawable/bg_corner"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pulauharapanpng"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            <LinearLayout
+                    android:background="@color/blackPrimary"
+                    android:alpha="0.7"
+                    android:padding="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                <TextView
+                        android:id="@+id/tv_judul"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/whitePrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="Wisata Secuil Surga di Pulau Harapan"
+                        android:textAllCaps="true"
+                        android:layout_height="22sp"/>
+
+                <LinearLayout
+                        android:layout_marginVertical="2dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:weightSum="2"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/tv_durasi"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textColor="@color/whitePrimary"
+                                android:text="Durasi: 1 Hari"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+                        <TextView
+                                android:id="@+id/tv_lokasi"
+                                android:layout_weight="1"
+                                android:textColor="@color/colorOrange"
+                                android:text="Pulau Harapan"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                            android:id="@+id/tv_harga"
+                            android:textColor="@color/colorOrange"
+                            android:textSize="22sp"
+                            android:gravity="bottom"
+                            android:textAlignment="textEnd"
+                            android:textStyle="bold"
+                            android:text="Rp 250.000"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:ignore="RtlCompat"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_rating"-->
+                    <!--android:background="@drawable/bg_corner_grey"-->
+                    <!--android:alpha="0.7"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="35dp">-->
+
+                <!--<ImageView-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:src="@drawable/ic_star"-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:layout_height="25dp"/>-->
+
+                <!--<TextView-->
+                        <!--android:id="@+id/tv_rating"-->
+                        <!--android:text="5.0"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textSize="18sp"-->
+                        <!--android:textColor="@color/whitePrimary"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"/>-->
+
+            <!--</LinearLayout>-->
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

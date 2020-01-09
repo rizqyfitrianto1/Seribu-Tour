@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whitePrimary"
+        tools:context=".Admin.Activity.PaketWisataAddActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+            android:layout_below="@id/appbar"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="Add Image"
+                android:layout_marginTop="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                android:background="@drawable/bg_border"
+                android:id="@+id/img_wisata"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+    <LinearLayout
+            android:layout_below="@+id/img_wisata"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Spinner
+                android:background="@drawable/bg_border_et"
+                android:id="@+id/sp"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <EditText
+                android:background="@drawable/bg_border_et"
+                android:id="@+id/edt_judul"
+                android:hint="Judul"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <EditText
+                android:background="@drawable/bg_border_et"
+                android:id="@+id/edt_durasi"
+                android:hint="Durasi"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <EditText
+                android:background="@drawable/bg_border_et"
+                android:id="@+id/edt_harga"
+                android:hint="Harga"
+                android:inputType="number"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <EditText
+                android:background="@drawable/bg_border_et"
+                android:id="@+id/edt_deskripsi"
+                android:hint="Deskripsi"
+                android:gravity="top"
+                android:inputType="text|textMultiLine"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+        <Button
+                android:id="@+id/btn_save"
+                android:text="Save"
+                android:layout_marginVertical="15dp"
+                android:textColor="@color/whitePrimary"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="18sp"
+                android:background="@drawable/bg_btn_blue_primary"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+            android:id="@+id/loading"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+                android:id="@+id/lottie"
+                layout="@layout/lottie"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

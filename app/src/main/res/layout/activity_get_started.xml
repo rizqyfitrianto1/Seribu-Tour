@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".GetStartedActivity">
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_call2"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_overlay_getstarted"  />
+
+    <TextView
+            android:id="@+id/intro_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="48dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_regular"
+            android:lineSpacingExtra="10dp"
+            android:text="Discover \nThe Beauty \nOf Seribu Island"
+            android:textColor="@color/whitePrimary"
+            android:textSize="44sp" />
+
+    <Button
+            android:layout_above="@+id/btn_new_account_create"
+            android:id="@+id/btn_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="48dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_btn_blue_primary"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/signin"
+            android:textColor="@color/whitePrimary"
+            android:textSize="18sp"/>
+
+    <Button
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btn_new_account_create"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="48dp"
+            android:background="@drawable/bg_btn_white_primary"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/new_account"
+            android:textColor="@color/graySecondary"
+            android:textSize="18sp"/>
+
+</RelativeLayout>

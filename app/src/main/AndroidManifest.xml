@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.belajarmaps">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".ForgotPasswordActivity"
+        android:parentActivityName=".LoginActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.AccountAdminEditActivity"
+                android:parentActivityName=".Admin.Activity.AccountAdminActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.FAQAdminEditActivity"
+                android:parentActivityName=".Admin.Activity.FAQAdminActivtiy">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.CategoryViewActivity"
+                android:parentActivityName=".Admin.Activity.CategoryActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.OrdersDetailActivity"
+                android:parentActivityName=".Admin.Activity.OrdersActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.CategoryEditActivity"
+                android:parentActivityName=".Admin.Activity.CategoryActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.PaketWisataEditActivity"
+                android:parentActivityName=".Admin.Activity.PaketWisataActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.PaketWisataDetailActivity"
+                android:parentActivityName=".Admin.Activity.PaketWisataActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.AccountAdminActivity"
+                android:parentActivityName=".Admin.Activity.HomeAdminActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.FAQAdminActivtiy"
+                android:parentActivityName=".Admin.Activity.HomeAdminActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.CategoryActivity"
+                android:parentActivityName=".Admin.Activity.HomeAdminActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.PaketWisataActivity"
+                android:parentActivityName=".Admin.Activity.HomeAdminActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.QueryAndSearchAct"
+                android:parentActivityName=".Admin.Activity.OrdersActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.OrdersActivity"
+                android:parentActivityName=".Admin.Activity.HomeAdminActivity">
+        </activity>
+        <activity
+                android:name=".Customer.Activity.FAQActivity"
+                android:parentActivityName=".Customer.Activity.HomeActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.FAQAdminAddActivity"
+                android:parentActivityName=".Admin.Activity.FAQAdminActivtiy">
+        </activity>
+        <activity
+                android:name=".Customer.Activity.OurOfficeActivity"
+                android:parentActivityName=".Customer.Activity.HomeActivity">
+        </activity>
+        <activity
+                android:name=".Customer.Activity.EditProfileActivity"
+                android:parentActivityName=".Customer.Activity.HomeActivity">
+        </activity>
+
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key"/>
+
+        <activity android:name=".Admin.Activity.ScanActivity">
+        </activity>
+        <activity
+                android:name=".Customer.Activity.DetailTicketActivity"
+                android:parentActivityName=".Customer.Activity.HomeActivity">
+        </activity>
+        <activity android:name=".Customer.Activity.SuccessBuyTicketAct">
+        </activity>
+        <activity android:name=".Customer.Activity.FormPesananActivity">
+        </activity>
+        <activity
+                android:name=".Customer.Activity.DetailWisataActivity"
+                android:label="@string/title_activity_maps">
+        </activity>
+        <activity
+                android:name=".Customer.Activity.ListByCategoryAct"
+                android:parentActivityName=".Customer.Activity.HomeActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.CategoryAddActivity"
+                android:parentActivityName=".Admin.Activity.CategoryActivity">
+        </activity>
+        <activity
+                android:name=".Admin.Activity.PaketWisataAddActivity"
+                android:parentActivityName=".Admin.Activity.PaketWisataActivity">
+        </activity>
+        <activity android:name=".Admin.Activity.HomeAdminActivity">
+        </activity>
+        <activity android:name=".SuccessRegisterActivity">
+        </activity>
+        <activity android:name=".GetStartedActivity">
+        </activity>
+        <activity android:name=".LoginActivity">
+        </activity>
+        <activity android:name=".RegisterTwoActivity">
+        </activity>
+        <activity android:name=".RegisterActivity">
+        </activity>
+        <activity android:name=".Customer.Activity.HomeActivity">
+        </activity>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".Admin.Interface.Potrait"
+                android:screenOrientation="fullSensor"
+                android:stateNotNeeded="true"
+                android:windowSoftInputMode="stateAlwaysHidden"/>
+    </application>
+
+</manifest>

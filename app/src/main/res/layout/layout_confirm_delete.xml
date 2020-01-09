@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/whitePrimary"
+              android:layout_width="300dp"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:background="@color/bluePrimary"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+        <TextView
+                android:id="@+id/tv_close"
+                android:paddingHorizontal="15dp"
+                android:text="X"
+                android:gravity="center_vertical"
+                android:textSize="22sp"
+                android:textColor="@color/whitePrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:paddingHorizontal="15dp"
+                android:text="Confirm Delete"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/whitePrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:text="Anda yakin ingin menhapus ?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:padding="3dp"
+                android:src="@drawable/ic_warning"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:layout_marginStart="10dp"
+                android:text="Jika kategory di hapus maka seluruh wisata terkait akan terhapus juga."
+                android:textColor="@color/blackPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_cancel"
+                android:background="@drawable/bg_border_primary"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Cancel"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <View android:layout_width="15dp" android:layout_height="match_parent"/>
+
+        <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_confirm"
+                android:background="@drawable/bg_btn_blue_primary"
+                android:textColor="@color/whitePrimary"
+                android:text="Confirm"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

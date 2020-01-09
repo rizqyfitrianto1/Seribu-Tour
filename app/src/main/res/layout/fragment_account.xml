@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:background="@color/whitePrimary"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context=".Customer.Fragment.AccountFragment">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_gradient_primary_blue">
+        </View>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/photo_profile"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icon_nopic">
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                    android:id="@+id/tv_name"
+                    android:text="User"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/whitePrimary"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="7dp"
+                    android:elevation="5dp"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="10dp">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blackPrimary"
+                                android:textSize="16sp"
+                                android:text="Informasi Account"/>
+
+                        <TextView
+                                android:id="@+id/tv_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="EDIT"
+                                android:layout_gravity="center_vertical"
+                                android:textAlignment="textEnd"
+                                android:textSize="16sp"
+                                android:drawableEnd="@drawable/ic_arrow_right_blue"
+                                android:drawablePadding="5dp"
+                                android:textColor="@color/colorPrimaryDark"
+                                tools:ignore="RtlCompat" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@drawable/ic_account"
+                                android:layout_gravity="center_vertical" />
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nama"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/blackPrimary"/>
+
+                            <TextView
+                                    android:id="@+id/tv_nama_lengkap"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rizqy Fitrianto"
+                                    android:textSize="16sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/colorGrey"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/ic_hp"
+                                android:layout_marginHorizontal="10dp" />
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                            <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="No Hanphone"
+                                    android:textColor="@color/blackPrimary"
+                                    android:textSize="18sp" />
+
+                            <TextView
+                                    android:id="@+id/tv_no_hp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="081280379774"
+                                    android:textSize="16sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/colorGrey"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/ic_email"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="10dp" />
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                            <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Email"
+                                    android:textColor="@color/blackPrimary"
+                                    android:textSize="18sp" />
+
+                            <TextView
+                                    android:id="@+id/tv_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="calonpengusahaindonesia@gmail.com"
+                                    android:textSize="16sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="7dp"
+                    android:elevation="5dp"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:id="@+id/ll_faq"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/ic_faq" />
+
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:id="@+id/txt_faq"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="FAQ"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/blackPrimary"/>
+
+                            <TextView
+                                    android:id="@+id/txt_faq_desc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pertanyaan yang sering diajukan"
+                                    android:textSize="16sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="end">
+
+                            <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/ic_arrow_right_blue" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/colorGrey"/>
+
+                    <LinearLayout
+                            android:id="@+id/ll_our_office"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/ic_office" />
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:id="@+id/txt_office"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Our Office"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/blackPrimary"/>
+
+                            <TextView
+                                    android:id="@+id/txt_office_desc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kunjungi kantor kami"
+                                    android:textSize="16sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="end">
+
+                            <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/ic_arrow_right_blue" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                    android:id="@+id/btn_sign_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_btn_blue_primary"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Sign out"
+                    android:textColor="@color/whitePrimary"
+                    android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+            android:id="@+id/loading"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+                android:id="@+id/lottie"
+                layout="@layout/lottie"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

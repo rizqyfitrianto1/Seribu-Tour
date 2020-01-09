@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "639551630893",
+    "firebase_url": "https://belajarmaps-f553e.firebaseio.com",
+    "project_id": "belajarmaps-f553e",
+    "storage_bucket": "belajarmaps-f553e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639551630893:android:00bf7f1def055a535f52a4",
+        "android_client_info": {
+          "package_name": "com.example.belajarmaps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639551630893-96rbk31e6k85gcegviun2p17e9rf47of.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.belajarmaps",
+            "certificate_hash": "52019e0f8cec9db708895dc419e6213a819548d8"
+          }
+        },
+        {
+          "client_id": "639551630893-8hqeos1fpb0su6s65ibghb04oispgf8g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWdavnD62WsyY039ljKY3DHjwSYKMKktQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639551630893-8hqeos1fpb0su6s65ibghb04oispgf8g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
