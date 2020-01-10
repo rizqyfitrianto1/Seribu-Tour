@@ -1,5 +1,6 @@
 package com.example.belajarmaps.Admin.Adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -34,12 +35,18 @@ class WisataAdminAdapter(val mWisata :List<Wisata>, val context:Context) : Recyc
         return mWisata.size
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val wisata = mWisata[position]
 
-        val localeID = Locale("in", "ID")
-        val formatRupiah = NumberFormat.getCurrencyInstance(localeID)
-        holder.tv_harga.text = formatRupiah.format(wisata.harga.toDouble()) + " / pack"
+//        val localeID = Locale("in", "ID")
+//        val formatRupiah = NumberFormat.getCurrencyInstance(localeID)
+//        val harga = wisata.harga.toInt()
+//        val harga2 = formatRupiah.format(harga.toDouble())
+//        holder.tv_harga.text = "$harga2 / pack"
+
+        val harga = wisata.harga
+        holder.tv_harga.text = "Rp $harga / pack"
 
         holder.tv_judul.text = wisata.judul
         holder.tv_durasi.text = wisata.durasi

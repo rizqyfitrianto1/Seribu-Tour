@@ -54,9 +54,10 @@ class FAQAdminActivtiy : AppCompatActivity() {
     }
 
     private fun getFAQ() {
-        reference.addListenerForSingleValueEvent(object : ValueEventListener {
+        reference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
+                    backup_faq.visibility = View.GONE
                     mFAQ.clear()
                     for (datasnapshot1: DataSnapshot in dataSnapshot.children) {
                         val faq: FAQ = datasnapshot1.getValue(FAQ::class.java) as FAQ
@@ -65,9 +66,6 @@ class FAQAdminActivtiy : AppCompatActivity() {
                     faqAdapter = FAQAdminAdapter(mFAQ, this@FAQAdminActivtiy)
                     recyclerView.adapter = faqAdapter
                     faqAdapter.notifyDataSetChanged()
-                } else {
-                    recyclerView.visibility = View.GONE
-                    backup_faq.visibility = View.VISIBLE
                 }
             }
 

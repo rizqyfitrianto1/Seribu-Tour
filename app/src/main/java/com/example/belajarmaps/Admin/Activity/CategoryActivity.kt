@@ -51,9 +51,10 @@ class CategoryActivity : AppCompatActivity() {
 
     private fun getCategory() {
         reference = FirebaseDatabase.getInstance().reference.child("Category")
-        reference.addListenerForSingleValueEvent(object : ValueEventListener {
+        reference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(dataSnapshot.exists()) {
+                    backup.visibility = View.GONE
                     mCategory.clear()
                     for (datasnapshot1: DataSnapshot in dataSnapshot.children) {
                         val p: Category = datasnapshot1.getValue(Category::class.java) as Category
@@ -62,9 +63,6 @@ class CategoryActivity : AppCompatActivity() {
                     categoryAdapter = CategoryAdminAdapter(mCategory , this@CategoryActivity)
                     recyclerView.adapter = categoryAdapter
                     categoryAdapter.notifyDataSetChanged()
-                }else{
-                    recyclerView.visibility = View.GONE
-                    backup.visibility = View.VISIBLE
                 }
             }
 

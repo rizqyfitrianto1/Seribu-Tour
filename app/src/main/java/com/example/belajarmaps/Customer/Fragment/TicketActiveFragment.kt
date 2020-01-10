@@ -49,9 +49,10 @@ class TicketActiveFragment : Fragment() {
     private fun getTicket(userid: String) {
         reference = FirebaseDatabase.getInstance().reference.child("MyTicket").child(userid)
         reference.orderByChild("status").equalTo("Ticket Aktif")
-            .addListenerForSingleValueEvent(object : ValueEventListener {
+            .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     if(dataSnapshot.exists()) {
+                        ll_no_ticket.visibility = View.GONE
                         mTicket.clear()
                         for (datasnapshot1: DataSnapshot in dataSnapshot.children) {
                             val p: Ticket = datasnapshot1.getValue(Ticket::class.java) as Ticket
@@ -60,8 +61,6 @@ class TicketActiveFragment : Fragment() {
                         ticketAdapter = context?.let { TicketAdapter(mTicket, it) }!!
                         recyclerView.adapter = ticketAdapter
                         ticketAdapter.notifyDataSetChanged()
-                    }else{
-                        ll_no_ticket.visibility = View.VISIBLE
                     }
                 }
 

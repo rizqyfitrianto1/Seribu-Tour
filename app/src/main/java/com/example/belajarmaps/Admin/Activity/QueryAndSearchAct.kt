@@ -108,9 +108,10 @@ class QueryAndSearchAct : AppCompatActivity() {
 
     private fun getDateQuery(date: String) {
         loading.visibility = View.VISIBLE
-        reference.orderByChild("date").equalTo(date).addListenerForSingleValueEvent(object : ValueEventListener {
+        reference.orderByChild("date").equalTo(date).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
+                    recyclerView.visibility = View.VISIBLE
                     loading.visibility = View.GONE
                     mTicket.clear()
                     var tot_ticket = 0
@@ -135,6 +136,10 @@ class QueryAndSearchAct : AppCompatActivity() {
                     tv_price.text = formatRupiah.format(tot_price.toDouble())
 
                 } else {
+                    tv_item.text = ""
+                    tv_ticket.text = ""
+                    tv_price.text = ""
+                    recyclerView.visibility = View.GONE
                     loading.visibility = View.GONE
                     Toasty.error(applicationContext, "No Data Found", Toasty.LENGTH_SHORT, true).show()
                 }
@@ -150,9 +155,10 @@ class QueryAndSearchAct : AppCompatActivity() {
         loading.visibility = View.VISIBLE
         val query = searchText.toUpperCase()
         val firebasQuery: Query = reference.orderByChild("id_ticket").startAt(query).endAt(query + "\uf8ff")
-        firebasQuery.addListenerForSingleValueEvent(object : ValueEventListener {
+        firebasQuery.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
+                    recyclerView.visibility = View.VISIBLE
                     loading.visibility = View.GONE
                     mTicket.clear()
                     var tot_ticket = 0
@@ -176,6 +182,10 @@ class QueryAndSearchAct : AppCompatActivity() {
                     val formatRupiah = NumberFormat.getCurrencyInstance(localeID)
                     tv_price.text = formatRupiah.format(tot_price.toDouble())
                 } else {
+                    tv_item.text = ""
+                    tv_ticket.text = ""
+                    tv_price.text = ""
+                    recyclerView.visibility = View.GONE
                     loading.visibility = View.GONE
                     Toasty.error(applicationContext, "No Data Found", Toasty.LENGTH_SHORT, true).show()
                 }

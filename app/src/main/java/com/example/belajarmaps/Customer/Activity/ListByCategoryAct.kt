@@ -21,6 +21,7 @@ class ListByCategoryAct : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var reference : DatabaseReference
+    private lateinit var backup: RelativeLayout
 
     lateinit var mWisata: MutableList<Wisata>
     private lateinit var wisataAdapter: WisataAdapter
@@ -28,6 +29,8 @@ class ListByCategoryAct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_by_category)
+
+        backup = findViewById(R.id.backup)
 
         val name = intent.getStringExtra("nameofcategory")
 
@@ -74,6 +77,7 @@ class ListByCategoryAct : AppCompatActivity() {
         firebasQuery.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
+                    backup.visibility = View.GONE
                     mWisata.clear()
                     for (datasnapshot1: DataSnapshot in dataSnapshot.children) {
                         val p: Wisata = datasnapshot1.getValue(Wisata::class.java) as Wisata
@@ -82,8 +86,6 @@ class ListByCategoryAct : AppCompatActivity() {
                     wisataAdapter = WisataAdapter(mWisata, this@ListByCategoryAct)
                     recyclerView.adapter = wisataAdapter
                     wisataAdapter.notifyDataSetChanged()
-                } else {
-                    Toasty.error(applicationContext, "No Data Found", Toasty.LENGTH_SHORT, true).show()
                 }
             }
 
@@ -98,6 +100,7 @@ class ListByCategoryAct : AppCompatActivity() {
             reference.orderByChild("lokasi").equalTo(name).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     if (dataSnapshot.exists()) {
+                        backup.visibility = View.GONE
                         mWisata.clear()
                         for (datasnapshot1: DataSnapshot in dataSnapshot.children) {
                             val p: Wisata = datasnapshot1.getValue(Wisata::class.java) as Wisata
@@ -106,8 +109,6 @@ class ListByCategoryAct : AppCompatActivity() {
                         wisataAdapter = WisataAdapter(mWisata, this@ListByCategoryAct)
                         recyclerView.adapter = wisataAdapter
                         wisataAdapter.notifyDataSetChanged()
-                    } else {
-                        Toasty.error(applicationContext, "No Data Found", Toasty.LENGTH_SHORT, true).show()
                     }
                 }
 
@@ -119,6 +120,7 @@ class ListByCategoryAct : AppCompatActivity() {
             reference.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     if (dataSnapshot.exists()) {
+                        backup.visibility = View.GONE
                         mWisata.clear()
                         for (datasnapshot1: DataSnapshot in dataSnapshot.children) {
                             val p: Wisata = datasnapshot1.getValue(Wisata::class.java) as Wisata
@@ -127,8 +129,6 @@ class ListByCategoryAct : AppCompatActivity() {
                         wisataAdapter = WisataAdapter(mWisata, this@ListByCategoryAct)
                         recyclerView.adapter = wisataAdapter
                         wisataAdapter.notifyDataSetChanged()
-                    } else {
-                        Toasty.error(applicationContext, "No Data Found", Toasty.LENGTH_SHORT, true).show()
                     }
                 }
 

@@ -65,10 +65,11 @@ class PaketWisataActivity : AppCompatActivity() {
 
     private fun getWisata() {
         reference = FirebaseDatabase.getInstance().reference.child("Wisata")
-        reference.addListenerForSingleValueEvent(object : ValueEventListener {
+        reference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(dataSnapshot.exists()) {
                     mWisata.clear()
+                    backup.visibility = View.GONE
                     for (datasnapshot1: DataSnapshot in dataSnapshot.children) {
                         val p: Wisata = datasnapshot1.getValue(Wisata::class.java) as Wisata
                         mWisata.add(p)
@@ -76,9 +77,6 @@ class PaketWisataActivity : AppCompatActivity() {
                     wisataAdapter = WisataAdminAdapter(mWisata, this@PaketWisataActivity)
                     recyclerView.adapter = wisataAdapter
                     wisataAdapter.notifyDataSetChanged()
-                }else{
-                    recyclerView.visibility = View.GONE
-                    backup.visibility = View.VISIBLE
                 }
             }
 

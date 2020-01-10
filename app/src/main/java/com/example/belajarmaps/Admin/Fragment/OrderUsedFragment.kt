@@ -41,7 +41,7 @@ class OrderUsedFragment : Fragment() {
 
     private fun getOrders() {
         reference = FirebaseDatabase.getInstance().reference.child("Order")
-        reference.orderByChild("status").equalTo("Sudah Digunakan").addListenerForSingleValueEvent(object : ValueEventListener {
+        reference.orderByChild("status").equalTo("Sudah Digunakan").addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(dataSnapshot.exists()) {
                     mTicket.clear()

@@ -76,7 +76,7 @@ class AccountFragment : Fragment() {
     private fun getDataUser(){
         val firebaseUser = FirebaseAuth.getInstance().currentUser?.uid.toString()
         reference = FirebaseDatabase.getInstance().reference.child("Users")
-        reference.child(firebaseUser).addListenerForSingleValueEvent(object : ValueEventListener {
+        reference.child(firebaseUser).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists()){
                     val photo = p0.child("photo").value.toString()
